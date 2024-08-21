@@ -22,9 +22,7 @@ export const buildCancelablePromise = <T>(asyncFunction: () => Promise<T>) => {
     return { run, cancel }
 }
 
-export const buildCancelableFetch = <T>(
-    asyncFunction: (signal?: AbortSignal) => Promise<T>,
-) => {
+export const buildCancelableFetch = <T>(asyncFunction: (signal?: AbortSignal) => Promise<T>) => {
     const controller = new AbortController()
 
     const run = () => {
