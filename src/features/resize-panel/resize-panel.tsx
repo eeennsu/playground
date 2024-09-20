@@ -96,7 +96,7 @@ export const ResizePanel: FC = () => {
                 tagName='section'>
                 <ResizablePanel
                     ref={descriptionPanelRef}
-                    className='py-6 pl-6'
+                    className='py-6 pl-6 max-h-dvh'
                     minSize={leftPanelMinSize}
                     maxSize={100 - 6.5}
                     defaultSize={panelDefaultSize}
@@ -104,7 +104,7 @@ export const ResizePanel: FC = () => {
                     onResize={(size) => throttledDescriptionPanelResize(size)}
                     collapsible>
                     <DescriptionPanelContent
-                        descriptionPanelRef={descriptionPanelRef}
+                        ref={descriptionPanelRef}
                         panelState={panelState}
                         handleExpand={handleExpand}
                         handleCollapse={handleCollapse}
@@ -117,14 +117,14 @@ export const ResizePanel: FC = () => {
                     <ResizablePanelGroup direction='vertical'>
                         <ResizablePanel
                             ref={codeEditorPanelRef}
-                            className='px-6 pb-6'
+                            className='px-6 pb-6 max-h-dvh'
                             defaultSize={panelDefaultSize}
                             minSize={rightPanelMinSize}
                             collapsedSize={rightPanelMinSize}
                             onResize={(size) => throttledCodeEditorPanelResize(size)}
                             collapsible>
                             <CodeEditorPanelContent
-                                codeEditorPanelRef={codeEditorPanelRef}
+                                ref={codeEditorPanelRef}
                                 panelState={panelState}
                                 handleExpand={handleExpand}
                                 handleCollapse={handleCollapse}
@@ -133,14 +133,14 @@ export const ResizePanel: FC = () => {
                         <CustomResizableHandle direction='vertical' />
                         <ResizablePanel
                             ref={outputPanelRef}
-                            className='px-6 pt-6'
+                            className='px-6 pt-6 max-h-dvh'
                             defaultSize={panelDefaultSize}
                             minSize={rightPanelMinSize}
                             collapsedSize={rightPanelMinSize}
                             onResize={(size) => throttledOutputPanelResize(size)}
                             collapsible>
                             <OutputPanelContent
-                                outputPanelRef={outputPanelRef}
+                                ref={outputPanelRef}
                                 panelState={panelState}
                                 handleExpand={handleExpand}
                                 handleCollapse={handleCollapse}
