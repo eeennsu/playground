@@ -3,7 +3,7 @@ import { VerticalTimelineExample } from '@/features/vertical-timeline/vertical-t
 
 export default function Home() {
     return (
-        <main className='min-h-dvh w-full flex'>
+        <main className='min-h-dvh w-full flex bg-slate-200'>
             <VerticalTimelineExample />
         </main>
     )
