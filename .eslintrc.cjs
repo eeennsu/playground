@@ -8,7 +8,7 @@ module.exports = {
         es2020: true,
     },
     plugins: ['react-refresh', 'eslint-plugin-react'],
-    extends: ['plugin:eslint-plugin-import/recommended', 'plugin:react-hooks/recommended', 'prettier'],
+    extends: ['plugin:eslint-plugin-import/recommended', 'plugin:react-hooks/recommended', 'prettier', 'plugin:storybook/recommended'],
     ignorePatterns: ['node_modules', 'dist', '.eslintrc.cjs', 'vite-env.d.ts', 'vite.config.ts'],
     rules: {
         'import/no-named-as-default-member': 'off', // 이 규칙을 끕니다

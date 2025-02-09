@@ -2,12 +2,14 @@
 
 import { MY_HISTORY } from '@/shared/constants/my-history'
 import type { FC } from 'react'
-import { VerticalTimeline } from 'react-vertical-timeline-component'
+import { VerticalTimeline, VerticalTimelineProps } from 'react-vertical-timeline-component'
 import { VerticalTimelineItem } from './vertical-timeline-item'
 
-export const VerticalTimelineExample: FC = () => {
+interface Props extends VerticalTimelineProps {}
+
+export const VerticalTimelineExample: FC<Props> = ({ ...props }) => {
     return (
-        <VerticalTimeline>
+        <VerticalTimeline {...props}>
             {MY_HISTORY.map((history, idx) => (
                 <VerticalTimelineItem
                     key={idx}
