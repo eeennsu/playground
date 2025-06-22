@@ -20,3 +20,6 @@ export const Default: Story = {
         className: 'bg-gray-600',
     },
 }
+
+
+'123'.padEnd
